@@ -3,16 +3,17 @@ import java.io.*;
 public class Reading_file {
     public static void main (String args[])
     {
+        int ch ;
         try
         {
-            File obj1 = new File("test1.txt");
-            Scanner Reader = new Scanner(obj1);
-            while (Reader.hasNextLine())
+            FileReader obj1 = new FileReader("factor.txt");
+            do
             {
-                String data = Reader.nextLine();
-                System.out.println(data);
+                 ch = obj1.read();
+               System.out.println((char)ch);
             }
-            Reader.close();
+            while(ch != -1);
+            obj1.close();
         }
         catch(Exception e)
         {

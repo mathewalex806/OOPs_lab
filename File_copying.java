@@ -11,6 +11,7 @@ public class File_copying {
             do
             {
                 r = f1.read();
+                System.out.println(r);
                 f2.write((char)r);
             }
             while(r != -1);
