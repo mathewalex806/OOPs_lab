@@ -38,7 +38,7 @@ public class TrafficLight extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == redButton) {
-            lightPanel.setBackground(Color.RED);
+            lightPanel.setBackground(Color.pink);
         } else if (e.getSource() == yellowButton) {
             lightPanel.setBackground(Color.YELLOW);
         } else if (e.getSource() == greenButton) {
