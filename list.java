@@ -6,10 +6,9 @@ public class list {
         number.add(2);
         number.add(3);
         number.add(4);
-        Iterator i=  number.iterator();
-        while(i.hasNext())
-        {
-            System.out.println(i.next());
-        }
+        int sum[] = new int[number.size()];
+        sum = number.toArray(sum);
+        System.out.println(sum);
+        System.out.println(sum);
     }
 }
