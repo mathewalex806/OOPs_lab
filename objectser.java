@@ -1,8 +1,10 @@
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.*;
-class Employee
+class Employee implements Serializable
 {
     String name;
     int age;
@@ -14,19 +16,24 @@ public class objectser {
         Employee e1 = new Employee();
         e1.age = 50;
         e1.name = "Alex";
-        e1.sal = 50000;
-        try {
-            FileOutputStream fout = new FileOutputStream("emp.ser");
-            ObjectOutputStream out = new ObjectOutputStream(fout);
-            out.writeObject(e1);
-            out.writeObject(e1);
-            out.close();
-            fout.close();
+            e1.sal = 50000;
+            try {
+                FileOutputStream fout = new FileOutputStream("emp.ser");
+                ObjectOutputStream out = new ObjectOutputStream(fout);
+                out.writeObject(e1);
+                out.close();
+                fout.close();
 
-            // Rest of your code...
+                Employee e2 = null;
+                FileInputStream fin = new FileInputStream("emp.ser");
+                ObjectInputStream oin = new ObjectInputStream(fin);
+                e2 = (Employee)oin.readObject();
+                System.out.println(e2.name);
+                oin.close();
+                fin.close();
 
-        } catch (Exception e) {
-            System.out.println(e);
+            } catch (Exception e) {
+                System.out.println(e);
+            }
         }
-    }
 }
