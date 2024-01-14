@@ -21,7 +21,7 @@ public class File_copying {
         } 
         catch (Exception e) 
         {
-            System.out.println("Error occured");
+            System.out.println("File not found");
         }
     }
 }
