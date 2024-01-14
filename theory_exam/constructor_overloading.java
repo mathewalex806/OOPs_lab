@@ -20,5 +20,6 @@ public class constructor_overloading {
     public static void main(String[] args) {
         Constructor_overloading obj1 = new Constructor_overloading();
         Constructor_overloading obj2 = new Constructor_overloading(10, 11,12);
+        System.out.println(obj2.a+""+obj2.b);
     }
 }
