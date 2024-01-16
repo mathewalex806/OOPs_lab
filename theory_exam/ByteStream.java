@@ -18,8 +18,8 @@ public class ByteStream {
             String s = "Output operation";
             for (int i=0; i<s.length(); i++)
             {
-                int val = (int)s[i];
-                f2.write(val);
+                byte[] b ={65,66,67};
+                f2.write(b);
             }
         }
         catch(Exception e)
