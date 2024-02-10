@@ -29,7 +29,5 @@ public class Thread_1 {
         t2.setName("Thread 2");
         t1.start();
         t2.start();
-        
-        
     }
 }
