@@ -1,0 +1,2 @@
+1 2 3 
+The value of the sum of all integers is 6
