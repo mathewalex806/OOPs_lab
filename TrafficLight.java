@@ -12,7 +12,7 @@ public class TrafficLight extends JFrame implements ActionListener {
     public TrafficLight() {
         setTitle("Traffic Light");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(200, 400);
+        setSize(300, 400);
         setLayout(new BorderLayout());
 
         lightPanel = new JPanel();
@@ -38,7 +38,7 @@ public class TrafficLight extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == redButton) {
-            lightPanel.setBackground(Color.pink);
+            lightPanel.setBackground(Color.RED);
         } else if (e.getSource() == yellowButton) {
             lightPanel.setBackground(Color.YELLOW);
         } else if (e.getSource() == greenButton) {
