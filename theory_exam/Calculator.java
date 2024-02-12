@@ -36,7 +36,22 @@ public class Calculator extends JFrame implements ActionListener
     }
     public void actionPerformed(ActionEvent ae)
     {
-        
+        String s = ae.getActionCommand();
+        switch (s)
+        {
+            case "+":
+                jtf.setText(String.valueOf(Integer.parseInt(text1.getText()) + Integer.parseInt(text2.getText())));
+                break;
+            case "-":
+                jtf.setText(String.valueOf(Integer.parseInt(text1.getText()) - Integer.parseInt(text2.getText())));
+                break;
+            case "*":
+                jtf.setText(String.valueOf(Integer.parseInt(text1.getText()) * Integer.parseInt(text2.getText())));
+                break;
+            case "/":
+                jtf.setText(String.valueOf(Integer.parseInt(text1.getText()) / Integer.parseInt(text2.getText())));
+                break;
+        }
     }
 
     public static void main(String args[])
